@@ -1,0 +1,6 @@
+<p><label for="user_terms">Send me emails when someone invites me</label>
+<%= check_box :prefs, :invite_in, :checked => checkbox_helper(@user.prefs.invite_in) -%></p>
+<p><label for="user_terms">Send me standard invite itinerary emails</label>
+<%= check_box :prefs, :times_up, :checked => checkbox_helper(@user.prefs.times_up) -%></p>
+<p><label for="user_terms">Notify invitor when I confirm/unconfirm<label>
+<%= check_box :prefs, :afirm_out, :checked => checkbox_helper(@user.prefs.afirm_out) -%></p>

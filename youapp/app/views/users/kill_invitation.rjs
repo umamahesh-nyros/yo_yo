@@ -1,0 +1,1 @@
+page.remove @invitation.dom_id('yo_in')

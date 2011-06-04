@@ -1,0 +1,2 @@
+page.replace_html 'invitation_list', :partial => 'preview'
+#page.replace @user.dom_id('invite_toggle'), invite_toggle(@user)

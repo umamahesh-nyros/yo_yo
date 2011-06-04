@@ -1,0 +1,8 @@
+<%#= assembled_friends(@friends) -%>
+<% unless @friends.blank? -%>
+  <% for friend in @friends -%>
+    <dl class="clearfix">
+    <%= invite_toggle(friend) -%>
+    </dl>
+  <% end %>
+<% end %>

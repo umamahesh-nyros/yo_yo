@@ -1,0 +1,5 @@
+<p>Yo you want to is a site to find people to do things with--and a way to get off the darn computer.<br /> 
+You are invited to add <%= @sentence -%> as new communities:&nbsp;
+  <%= link_to 'Hell ya!', :action => :accept_community, :id => @hash -%>&nbsp;|&nbsp;
+  <%= link_to 'Uh, no', :controller => :public -%>
+</p>

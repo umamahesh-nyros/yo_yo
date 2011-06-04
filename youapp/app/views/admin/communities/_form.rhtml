@@ -1,0 +1,17 @@
+<%= error_messages_for 'community' %>
+
+<!--[form:community]-->
+<p><label for="community_name">Name</label><br/>
+<%= text_field 'community', 'name'  %></p>
+<% if @parent %>
+<p><label for="community_regex">Email Expression</label><br/>
+<%= text_field 'community', 'regex_email'  %>&nbsp;(eg. upenn.edu)</p>
+<% else -%>
+<p><label for="community_tags">Tags</label><br/>
+<%= text_field 'tag', 'string'  %>&nbsp;(comma delimited)</p>
+<% end -%>
+<!--
+<p><label for="community_active">Active</label><br/>
+<%#= select :community, :active, [false, true], :selected => @community.active -%></p>-->
+<!--[eoform:community]-->
+

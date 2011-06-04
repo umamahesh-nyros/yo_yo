@@ -1,0 +1,165 @@
+*{
+margin:0px;
+padding:0px;
+}
+
+body,html{
+font-family:"Arial";
+background:#efefef;
+text-align:center;
+}
+
+html{
+border-top:solid 1em black;
+}
+
+li {
+text-align:center;
+list-style-type:none;
+float:left;
+width:200px;
+background:black;
+color:white;
+padding:10px;
+margin:1px;
+}
+
+.important {background:red}
+
+.container{
+text-align:center;
+margin:auto;
+width:100%
+}
+
+.navigation{
+margin:auto;
+width:700px
+}
+
+.header{
+
+}
+
+.content{
+text-align:left;
+margin:auto;
+width:80%;
+padding:10px;
+background:white;
+margin-top:2em;
+border:solid 1px #ccc;
+border-top:solid 10px #666;
+clear:left;
+}
+
+#login{
+width:400px;
+}
+
+table{
+width:90%;
+margin-top:0em;
+border:solid 1px #999;
+}
+
+td{
+padding:3px;
+border-right:solid 1px #ccc;
+border-bottom:solid 1px #ccc;
+}
+
+td a{ font-weight:bold}
+
+h1{
+font-size:140%;
+text-transform:capitalize;
+margin-bottom:1em;
+font-weight:normal
+}
+
+.yield h1{color:red}
+.header h1{background:black;color:white;width:100%}
+
+th{
+padding:3px;
+background:black;
+color:white;
+font-weight:bold;
+}
+
+li a{
+color:white
+}
+
+form{
+background:#eee;
+border:solid 1px #ccc;
+margin-bottom:1em;
+padding:5px;
+}
+
+form p{
+padding:10px;
+border-bottom:solid 1px #bbb;
+}
+
+label{display:block;font-weight:bold;width:150px;float:left}
+
+.cleaner{
+clear:both;
+font-size:0%;
+display:hidden;
+height:0px;
+
+}
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  /*border: 2px solid red;*/
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 13px;
+  list-style: none;
+  width: 400px;
+  /*float: left;*/
+  padding: 5px;
+  margin:1px;
+  text-align: left;
+  color: red;
+  background: none;
+}
+
+#tag_cloud {
+  width: 400px;
+  background:#eee;
+  border:solid 1px #ccc;
+  margin-bottom:1em;
+  padding:5px;
+}

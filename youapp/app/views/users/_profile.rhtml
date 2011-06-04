@@ -1,0 +1,34 @@
+<h2>Profile</h2>
+<% if @profile[:photo] %>
+  <p><%= image_tag (url_for_file_column @profile[:photo], "image", "thumb") -%></p>
+<% else -%>
+  <p><%= image_tag 'silhouette' -%></p>
+<% end -%>
+<p>
+  <b>Name:</b> <%=h @profile[:name] -%>
+</p>
+<!--
+<p>
+  <b>Yotag:</b> <%#=h @profile[:yotag] -%>
+</p>
+-->
+<p>
+  <b>Sex:</b> <%=h @profile[:sex] -%>
+</p>
+<!--
+<p>
+  <b>College:</b> <%#=h @profile[:college] -%>
+</p>
+-->
+<p>
+  <b>Phone:</b> <%=h @profile[:phone] -%>
+</p>
+<p>
+  <b>Email:</b> <%=h @profile[:email] -%>
+</p>
+<p>I am looking for people who enjoy...</p>  
+<% @profile[:interests].each do |int| -%> 
+<p>
+  <%=h int -%>
+</p>
+<% end -%>

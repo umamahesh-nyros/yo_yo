@@ -1,0 +1,6 @@
+<div class="field fieldRed">
+  <label>To select who can come, please log in:</label>
+  <%= text_field :user, :email, :value => "Enter your email", :class => 'text text1', :onfocus => "if(this.value=='Enter your email'){this.value=''}", :onblur => "if(this.value==''){this.value='Enter your email'}" -%>
+  <%= password_field :user, :password, :value => "Enter your password", :class => 'text text1', :onfocus => "if(this.value=='Enter your password'){this.value=''}", :onblur => "if(this.value==''){this.value='Enter your password'}" -%>
+</div>
+

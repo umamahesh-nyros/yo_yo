@@ -1,0 +1,6 @@
+<h1>Tags</h1>
+<p id='tag_cloud'>
+  <% for tag in @tags -%>
+    <%= link_to tag.tagname, :action => :delete_tag, :id => tag.id -%>&nbsp;
+  <% end -%>
+</p>

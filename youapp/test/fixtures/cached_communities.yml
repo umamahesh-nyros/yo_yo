@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  name: College Park
+  community_id: 3
+  preferred_parent_id: 2
+  active: true
+two:
+  id: 2
+  name: econ heaven
+  community_id: 4
+  preferred_parent_id: 2
+  active: true

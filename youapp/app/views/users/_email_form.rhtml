@@ -1,0 +1,9 @@
+<% form_tag :action => 'parse_email' do %>
+  <%= error_messages_for 'email' %>
+
+  <!--[form:email]-->
+  <label for="email">Send Email Invitation</label><br/>
+  <%= text_field :email, :email -%>
+  <%= submit_tag 'invite' %>
+  <!--[eoform:email]-->
+<% end %>

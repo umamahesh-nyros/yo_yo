@@ -1,0 +1,4 @@
+#we want to update the whole list
+page.replace_html 'invitation_list', :partial => 'preview'
+page['search_text_field'].clear
+#page.replace @user.dom_id('invite_toggle'), invite_toggle(@user)

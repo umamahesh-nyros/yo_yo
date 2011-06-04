@@ -1,0 +1,5 @@
+<ul>
+  <% session[:invite].users.each do |person| %>
+    <li><%= invite_toggle(person) %></li>
+  <% end %>
+</ul>

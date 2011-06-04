@@ -1,0 +1,8 @@
+<h2>Forgot your password?</h2>
+<% form_tag :action => :email_password do -%>
+<p><label for="user_email">Email</label><br />
+<%= text_field :user, :email %><br />
+<%= submit_tag "Send" %></p>
+<% end -%>
+
+<p>If you've forgotten your password, upon submitting the above form we will send you an email with instructions. If you don't receive an email within a minute of submitting this form, make sure it didn't end up in your spam folder.</p>

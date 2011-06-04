@@ -1,0 +1,74 @@
+one:
+  id: 1
+  name: UPenn
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  regex_email: upenn.edu
+  active: true
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: 
+  parent: 
+two:
+  id: 2
+  name: UMD
+  regex_email: umd.edu
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  active: true
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: 
+  parent:
+three:
+  id: 3
+  name: College Park
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  active: true
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: f1f2f3f4
+  parent: 2
+four:
+  id: 4
+  name: Economics Department
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  active: true
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: 
+  parent: 3
+five:
+  id: 5
+  name: Music Department
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  active: true
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: 
+  parent: 3
+six:
+  id: 6
+  name: MacroEcon201
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  active: true
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: 
+  parent: 4
+seven:
+  id: 7
+  name: Dummy
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  active: false
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: 
+  parent:
+eight:
+  id: 8
+  name: Dummy2
+  created_at: 2007-10-08 18:54:06
+  updated_at: 
+  active: true
+  expires_at: 2010-10-08 18:54:06
+  hashed_name: 
+  parent:

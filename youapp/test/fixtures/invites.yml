@@ -1,0 +1,51 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  user_id: 1
+  content: Come get ice cream
+  created_at: 2007-10-05 14:50:08
+  updated_at: 2007-10-05 14:50:08
+  expires_at: null
+  expiration_interval: 5
+  maximum_users: 2
+  active: true
+two:
+  id: 2
+  user_id: 1
+  content: Come get coffee
+  created_at: 2007-10-05 14:50:08
+  updated_at: 2007-10-05 14:50:08
+  expires_at: null
+  expiration_interval: 5
+  maximum_users: 2
+  active: true
+three:
+  id: 3
+  user_id: 1
+  content: Come get coffee
+  created_at: 2007-10-05 14:50:08
+  updated_at: 2007-10-05 14:50:08
+  expires_at: 2009-10-05 14:50:08
+  expiration_interval: 5
+  maximum_users: 2
+  active: true
+four:
+  id: 4
+  user_id: 1
+  content: Come get coffee
+  created_at: 2007-10-05 14:50:08
+  updated_at: 2007-10-05 14:50:08
+  expires_at: null
+  expiration_interval: 5
+  maximum_users: 3
+  active: true
+five:
+  id: 5
+  user_id: 1
+  content: Come get coffee
+  created_at: 2007-10-05 14:50:08
+  updated_at: 2007-10-05 14:50:08
+  expires_at: null
+  expiration_interval: 5
+  maximum_users: 3
+  active: true

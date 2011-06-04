@@ -1,0 +1,25 @@
+<div class="signupForm">
+<h2>Find communities</h2>
+<%= error_messages_for 'search' -%>
+<div>Search:</div>
+<% form_tag :action => :search_communities do -%>
+  <%= text_field :search, :string %>
+  <%= submit_tag 'find communities' %>
+<% end -%>
+<% if @results -%>
+  <h2>Matching results</h2>
+  <% for comm in @results -%>
+    <%= comm.name -%>&nbsp;
+    <small><%= link_to '[add]', :action => :select_community, :id => comm.id -%></small><br />
+  <% end -%>
+<% end -%>
+<h2>My communities</h2>
+<% if @communities.length > 0 -%>
+  <% for comm in @communities -%>
+    <%= comm.name -%>&nbsp;
+    <small><%= link_to '[delete]', :action => :delete_community, :id => comm.id -%></small><br />
+  <% end -%>
+<% else -%>
+ <p>There are no communities avaiable to you</p> 
+<% end -%>
+</div>

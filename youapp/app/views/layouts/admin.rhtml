@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title><%= @page_title %></title>
+    <%= stylesheet_link_tag 'admin' %>
+  </head>
+  <body>
+    <div class="container">
+     <div class="header">
+      <h1>Admin Tool</h1>
+       <div class="navigation">
+        <ul>
+         <li class="important"><%= link_to "MyHome", :controller => "communities" -%></li>
+         <% %w(communities).each do |x| %>
+           <li class="<%=x %>"><%= link_to x.gsub("_", " "), :controller => x -%></li>
+         <% end %>
+         <li class="important"><%= link_to "Logout", :controller => "/signup", :action => "logout" -%></li>
+        </ul>
+       </div>
+       <div class="cleaner"></div>
+      </div>
+      <div class="content">
+       <p style="color: green"><%= flash[:notice] %></p>
+       <div><%= @page_title unless @page_header %></div>
+       <div class="yield" id="admin"><%= yield %></div>
+      </div>
+     <div class="footer"></div>
+    </div>
+  </body>
+</html>

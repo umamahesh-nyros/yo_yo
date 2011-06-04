@@ -1,0 +1,5 @@
+<h1>Listing Communities</h1>
+<%= link_to 'New Community', :controller => '/admin/communities', :action => :new %>
+<% for community in @communities %>
+  <%= assembled_admin_communities(community) -%>
+<% end %>

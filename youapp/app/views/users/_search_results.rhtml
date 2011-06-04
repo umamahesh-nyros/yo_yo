@@ -1,0 +1,9 @@
+<ul>
+  <% if search_results.blank? %>
+    <em>no results found</em>
+  <% else %>
+    <% search_results.each do |result| %>
+      <%= search_result_item(result) %>
+    <% end %>
+  <% end %>
+</ul>

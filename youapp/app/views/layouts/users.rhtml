@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Yo you want to...</title>
+  <%= stylesheet_link_tag 'reset' %>
+  <%= stylesheet_link_tag 'style' %>
+  <%= javascript_include_tag 'prototype' %>
+  <%= javascript_include_tag 'effects' %>
+  <%= javascript_include_tag 'controls' %>
+  <%= javascript_include_tag 'jquery' -%>
+  <%= javascript_include_tag 'tabs' %>
+  <script type="text/javascript">
+    var $j = jQuery.noConflict();
+    $j(document).ready(function(){
+      $jQueryTabs = $j('#selector > ul').tabs();
+      $j("#special_past_yos_select").change(function(){
+        var obj = $j.grep($j(this).children(), function(i){return i.selected == true})[0];
+        var value = $j(obj).val()
+        if(value){ 
+          var combined = '/users/invited_populace/' + value  
+          $j("#special_past_yos_form").attr("action", combined);
+          $j("#special_past_yos_form").submit();
+        }
+      });
+      $j("#special_community_select").change(function(){
+        var obj = $j.grep($j(this).children(), function(i){return i.selected == true})[0];
+        if(obj.id.length > 0){ 
+          var action = obj.id
+          var value = $j(obj).val()
+          var combined = '/users/' + action + '/' + value  
+          $j("#special_community_form").attr("action", combined);
+          $j("#special_community_form").submit();
+        }
+      });
+    });
+  </script>
+  <% unless TESTMODE -%>
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("<%=GOOGLE-%>");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+  <% end -%>
+</head>
+<body>
+<%= most_recent -%>
+<% if TESTMODE -%>
+  <p style="color: red">TESTMODE</p>
+<% end -%>
+<div id='message'>
+  <p style="color: green"><%= flash[:notice] -%></p>
+  <p style="color: red"><%= flash[:warning] -%></p>
+</div>
+<div id="mainWrapper">
+  <div id="logo" class="logo2"> <%= link_to image_tag('logo2.png'), :controller => :users -%></a> </div>
+    <div id="topNav" class="topNav2">
+      <ul class="clearfix">
+    <% if session[:user_id] -%>
+      <%#= link_to 'new yo', :controller => :users, :action => :new_yywt %>
+	<li><%= link_to image_tag('community_t2.jpg'), :controller => :users, :action => :communities %></li>
+	<li><%= link_to image_tag('edit_account_t2.jpg'), :controller => :users, :action => :edit_profile %></li>
+	<li><%= link_to image_tag('logout_t2.jpg'), :controller => :signup, :action => :logout %></li>
+    <% end -%>
+      </ul>
+    </div>
+
+    <div id="pagebody" class="pagebody4 clearfix">
+    <!--YIELD-->
+    <%= yield %>
+    <!--YIELD-->
+
+    <div id="footer" class="footer2">
+      <p><a href="#">Yos in / Yos out</a> | <a href="#">Communities</a> | <a href="#">Edit Profile</a> | <a href="#">Tell a friend</a> | <a href="#">Help</a> | <a href="#">Log out</a></p>
+      <p>&copy;<%=YEAR-%> Yoyouwantto.com. All Right Reserved.</p>
+    </div>
+  </div>
+  <div class="condom">
+  <!-- -->
+  </div>
+</div>
+</body>
+</html>

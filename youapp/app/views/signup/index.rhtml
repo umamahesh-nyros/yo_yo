@@ -1,0 +1,34 @@
+<div class="lcol">
+  <div id="notepaper" class="notepaper2">
+    <div class="inner">
+      <h2>Yo! you want to...</h2>
+      <% form_tag({:action => 'submit'},{:class => 'clearfix'}) do %>
+	<%= render :partial => 'form_yywt' %>
+	<%= render :partial => 'form_login' %>
+	<div class="notSignedup">
+	  <p><%= link_to 'damn it, I forgot my password...', :action => :forgotten -%></p>
+	</div>
+	<%= image_submit_tag 'button_login', :class => 'login' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="mcol clearfix">
+  <div class="notepaper3">
+    <div class="wrap">
+      <h2>New here? <span>Start here.</span></h2>
+      <p>YoYouWantTo is simple: post what you want to do to the people and communities you’re willing to do it with and see who wants to do it with you.</p>
+      <h2>For example:</h2>
+      <p>Yo, you want to study for the ECON002 final?<br />
+	Yo, you want to go on a hot date with me?<br />
+	Yo, you want to go to Wawa at 4am?</p>
+      <h2>Sign up:</h2>
+      <fieldset>
+        <% form_tag({:action => 'create'},{:class => 'signupForm2'}) do %>
+          <%= render :partial => 'form' %>
+          <%= image_submit_tag 'button_signup', :class => 'buttonSignup' %>
+        <% end %>
+      </fieldset>
+    </div>
+  </div>
+</div>

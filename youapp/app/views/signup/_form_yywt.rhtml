@@ -1,0 +1,51 @@
+<%= text_field :yywt, :content, :class => "text text1" -%>
+<div class="fieldHalf">
+  <label>with up to</label>
+  <%= select :yywt, :maximum_users, MAXIMUM_USERS_ARRAY, :selected => MAXIMUM_USERS_DEFAULT %>
+</div>
+<div class="fieldHalf">
+  <label>in</label>
+  <%= select :yywt, :expiration_interval, expiration, :selected => EXP_DEFAULT -%></p>
+</div>
+
+<script type="text/javascript">
+  //<![CDATA[
+var RecentYos = {
+  textBox: $('yywt_content'),
+  listIndex: 0,
+  yosList: $$('#recent_yos li'),
+  timer: null,
+  timerDelay: 750,
+  hideYos: function(){
+    $('recent_yos').hide();
+  },
+  nextItem: function(){
+    value = this.yosList[this.listIndex].innerHTML;
+    this.listIndex = (this.listIndex + 1) % this.yosList.length;
+    return value;
+  },
+  blur: function (event) {
+    if(this.textBox.value == ''){
+      this.timer = setInterval(cycle, this.timerDelay)
+      this.textBox.addClassName('blurred');
+    }
+  },
+  focus: function (event) {
+    this.textBox.value = '';
+    this.textBox.removeClassName('blurred');
+    if(this.timer != null)
+      clearInterval(this.timer);
+  }
+};
+
+function cycle(){
+  RecentYos.textBox.value = RecentYos.nextItem();
+}
+RecentYos.hideYos();
+Event.observe(window, 'load', RecentYos.blur.bindAsEventListener(RecentYos));
+Event.observe('yywt_content', 'blur', RecentYos.blur.bindAsEventListener(RecentYos));
+Event.observe('yywt_content', 'focus', RecentYos.focus.bindAsEventListener(RecentYos));
+
+//]]>
+</script>
+

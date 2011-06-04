@@ -1,0 +1,7 @@
+<% unless @user.photo.nil? %>
+  <p><%= image_tag (url_for_file_column @user.photo, "image", "thumb") -%>&nbsp;
+  <small><%= link_to 'delete', :action => :delete_photo -%></small></p>
+<% end %>
+<p><label for="photo">Photo</label>
+<br />
+<%= file_column_field "photo", "image" %></p>

@@ -1,0 +1,30 @@
+<!--[form:search]-->
+<div class="field">
+  <label>Who can come?</label>
+    <%= text_field :search, :string, :id => 'search_text_field' -%>
+    <%= hidden_field :user, :id %>
+    <%= link_to_function 'invite', 'submitInvite()', :id => 'submit_invite'%>
+</div>
+
+  <div id="search_results" class="autocomplete">
+    <%= render :partial => 'search_results', :object => nil %>
+  </div>
+
+<script type="text/javascript">
+  new Ajax.Autocompleter('search_text_field', 
+                         'search_results',
+                         '/users/parse_search',
+                         {minChars: 2,
+                          afterUpdateElement: getSelectionId});
+
+function getSelectionId(text, li){
+  $('user_id').value = li.id
+  submitInvite();
+}
+
+function submitInvite(){
+  var url = "/users/invite/" + $('user_id').value;
+  new Ajax.Request(url, {asynchronous: true, evalScripts: true})
+}
+  
+</script>

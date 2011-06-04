@@ -1,0 +1,12 @@
+<h1>Editing Community</h1>
+
+<% form_tag :action => 'update', :id => @community do %>
+  <%= render :partial => 'form' %>
+  <% unless @parent -%>
+    <%= render :partial => 'tag_cloud' %>
+  <% end %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @community %> |
+<%= link_to 'Back', :action => 'list' %>

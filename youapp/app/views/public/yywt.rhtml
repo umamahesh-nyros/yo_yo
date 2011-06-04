@@ -1,0 +1,9 @@
+<div class="signupForm">
+<%= error_messages_for 'yywt' -%>
+<% form_tag :action => 'create' do -%>
+  <%= render :partial => 'question' %>
+  <%= render :partial => 'friends' %>
+  <%= render :partial => 'expires' %>
+  <%= submit_tag 'Next' %>
+<% end -%>
+</div>

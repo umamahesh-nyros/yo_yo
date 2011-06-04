@@ -1,0 +1,1 @@
+page.replace @invitation.dom_id('yo_in'), yo_div(@invitation)

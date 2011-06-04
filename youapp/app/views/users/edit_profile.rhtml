@@ -1,0 +1,11 @@
+<div class="signupForm">
+<h1>Edit Your Profile</h1>
+
+<% form_tag({:action => 'update_profile'}, {:multipart => true}) do %>
+  <%#= render :partial => 'profile_yotag' %>
+  <%= render :partial => 'profile_photo' %>
+  <%= render :partial => 'profile_form' %>
+  <%#= render :partial => 'profile_prefs' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+</div>

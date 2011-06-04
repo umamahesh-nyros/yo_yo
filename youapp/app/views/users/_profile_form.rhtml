@@ -1,0 +1,30 @@
+<%= error_messages_for 'user' %>
+
+<!--[form:user]-->
+<p><label for="user_first_name">First name</label><br/>
+<%= text_field :user, :first_name -%></p>
+
+<p><label for="user_last_name">Last name</label><br/>
+<%= text_field :user, :last_name  -%></p>
+
+<p><label for="user_email">Email</label><br/>
+<%= text_field :user, :email -%></p>
+
+<p><label for="user_sex">Sex</label><br/>
+<%= select :user, :sex_id, Sex.find(:all).collect{|s|[s.name, s.id]}, :include_blank => true  -%></p>
+
+<!--<p><label for="user_phone">Phone</label><br/>
+<%#= text_field :user, :phone -%></p>-->
+
+<!--<p><label for="user_college">College</label><br/>
+<%#= select :user, :college_id, College.find(:all, :conditions => ['active = ?',true]).collect{|col|[col.name, col.id]}, :include_blank => true  -%></p>-->
+
+<!--
+<p>I am looking for people who enjoy...<br />
+<label for="user_interests_1">1.</label><br />
+<%#= text_field :user, :interest_1 -%><br />
+<label for="user_interests_1">2.</label><br />
+<%#= text_field :user, :interest_2 -%><br />
+<label for="user_interests_1">3.</label><br />
+<%#= text_field :user, :interest_3 -%></p>-->
+<!--[eoform:user]-->

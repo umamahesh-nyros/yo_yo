@@ -1,0 +1,7 @@
+<p><label for="user_yotag">Yotag</label>
+<% if @user.yotag -%>
+<b><%= @user.yotag.tag -%></b>
+<% else -%>
+<br /><%= select :user, :yotag_id, Yotag.new_random_tag.collect{|tags| [tags.tag, tags.id]}, :include_blank => true -%>
+<% end -%>
+</p>

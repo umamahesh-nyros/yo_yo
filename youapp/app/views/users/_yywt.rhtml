@@ -1,0 +1,12 @@
+<% form_tag({:action => :update_yywt}, :id => 'special_update_yywt') do %>
+  <%= text_field :yywt, :content, :class => "text text1" -%>
+  <div class="fieldHalf">
+    <label>with up to</label>
+    <%= select :yywt, :maximum_users, MAXIMUM_USERS_ARRAY, :selected => @yywt.maximum_users -%>
+  </div>
+  <div class="fieldHalf">
+    <label>in</label>
+    <%= select :yywt, :expiration_interval, expiration, :selected => @yywt.expiration_interval -%><br />
+  </div>
+<% end -%>
+<%= observe_form :special_update_yywt, :url => {:action => :update_yywt}, :update => {}%>

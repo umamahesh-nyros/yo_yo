@@ -1,0 +1,6 @@
+[<%=@name-%>]
+
+Cool! The follwoing people have commited to "Yo you want to <%=@invite-%>:"
+<% @guests.each do |p| -%>
+<%= p %>
+<% end %>

@@ -1,0 +1,10 @@
+--- 
+user: yoyouwa
+cwd: /home/yoyouwa/projects/production/current/
+log_file: log/mongrel.log
+port: "41520"
+environment: production
+group: yoyouwa
+address: 127.0.0.1
+pid_file: tmp/pids/mongrel.pid
+servers: 2

@@ -1,0 +1,29 @@
+<%= error_messages_for 'user' %>
+<div class="field">
+  <label>First name</label>
+  <%= text_field :user, :first_name, :class => 'text' -%>
+</div>
+<div class="field">
+  <label>Last name</label>
+  <%= text_field :user, :last_name, :class => 'text' -%>
+</div>
+<div class="field">
+  <label>Email address</label>
+  <%= text_field :user, :email, :class => 'text' -%>
+</div>
+<div class="field">
+  <label>Password</label>
+  <%= password_field :user, :password, :class => 'text' -%>
+</div>
+<div class="field">
+  <label>Confirm</label>
+  <%= password_field :user, :password_confirmation, :class => 'text' -%>
+</div>
+<div class="fieldRight">
+  <%= check_box :user, :terms -%>
+  <p>I agree to the <%= link_to 'terms of use', :action => :terms %></p>
+</div>
+<div id="proxy">
+  <label>Please disregard this field if you are seeing this:</label>
+  <%= text_field :user_proxy, :email -%>
+</div>

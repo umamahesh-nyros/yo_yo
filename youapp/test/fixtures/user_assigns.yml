@@ -1,0 +1,21 @@
+one:
+  id: 1
+  user_alpha_id: 1
+  user_beta_id: 2
+  created_at :
+  updated_at :
+  active: true
+two:
+  id: 2
+  user_alpha_id: 1
+  user_beta_id: 4
+  created_at :
+  updated_at :
+  active: false
+three:
+  id: 3
+  user_alpha_id: 2
+  user_beta_id: 1
+  created_at :
+  updated_at :
+  active: true

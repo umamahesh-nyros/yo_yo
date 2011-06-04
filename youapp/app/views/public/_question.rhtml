@@ -1,0 +1,43 @@
+<p><label for="yywt_text">Yo you want to... </label>
+  <%= text_field :yywt, :content -%></p>
+
+<script type="text/javascript">
+  //<![CDATA[
+var RecentYos = {
+  textBox: $('yywt_content'),
+  listIndex: 0,
+  yosList: $$('#recent_yos li'),
+  timer: null,
+  timerDelay: 750,
+  hideYos: function(){
+    $('recent_yos').hide();
+  },
+  nextItem: function(){
+    value = this.yosList[this.listIndex].innerHTML;
+    this.listIndex = (this.listIndex + 1) % this.yosList.length;
+    return value;
+  },
+  blur: function (event) {
+    if(this.textBox.value == ''){
+      this.timer = setInterval(cycle, this.timerDelay)
+      this.textBox.addClassName('blurred');
+    }
+  },
+  focus: function (event) {
+    this.textBox.value = '';
+    this.textBox.removeClassName('blurred');
+    if(this.timer != null)
+      clearInterval(this.timer);
+  }
+};
+
+function cycle(){
+  RecentYos.textBox.value = RecentYos.nextItem();
+}
+RecentYos.hideYos();
+Event.observe(window, 'load', RecentYos.blur.bindAsEventListener(RecentYos));
+Event.observe('yywt_content', 'blur', RecentYos.blur.bindAsEventListener(RecentYos));
+Event.observe('yywt_content', 'focus', RecentYos.focus.bindAsEventListener(RecentYos));
+
+//]]>
+</script>
